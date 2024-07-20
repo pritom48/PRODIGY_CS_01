@@ -1,19 +1,19 @@
 def encrypt(text, shift):
     result = ""
 
-    # traverse text
+   
     for i in range(len(text)):
         char = text[i]
 
-        # Encrypt uppercase characters
+        # Encrypt uppercase 
         if char.isupper():
             result += chr((ord(char) + shift - 65) % 26 + 65)
 
-        # Encrypt lowercase characters
+        # Encrypt lowercase 
         elif char.islower():
             result += chr((ord(char) + shift - 97) % 26 + 97)
         
-        # For other characters, don't change
+       
         else:
             result += char
 
